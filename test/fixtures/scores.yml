@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  require_score: 1.5
+  left_credit: 1
+
+two:
+  require_score: 1.5
+  left_credit: 1

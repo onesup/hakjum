@@ -1,0 +1,51 @@
+<%= form_for(@score) do |f| %>
+  <% if @score.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@score.errors.count, "error") %> prohibited this score from being saved:</h2>
+
+      <ul>
+      <% @score.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <% if params[:action] == "new" %>
+    <div class="field">
+      <p>지금까지 들은 학점</p>
+      <%= f.text_field :got_total_credit, :value => 113 %>
+    </div>
+    <div class="field">
+      <p>더 들을 수 있는 학점</p>
+      <%= f.text_field :left_credit, :value => 40 %>
+    </div>
+    <div class="field">
+      <p>현재 평점</p>
+      <%= f.text_field :current_average_score, :value => 3.3 %>
+    </div>
+    <div class="field">
+      <p>원하는 평점</p>
+      <%= f.text_field :need_average_score, :value => 3.5 %>
+    </div>
+  <% else %>
+    <div class="field">
+      <p>지금까지 들은 학점</p>
+      <%= f.text_field :got_total_credit %>
+    </div>
+    <div class="field">
+      <p>더 들을 수 있는 학점</p>
+      <%= f.text_field :left_credit %>
+    </div>
+    <div class="field">
+      <p>현재 평점</p>
+      <%= f.text_field :current_average_score %>
+    </div>
+    <div class="field">
+      <p>원하는 평점</p>
+      <%= f.text_field :need_average_score %>
+    </div>
+  <% end %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,4 +1,7 @@
 Hakjum::Application.routes.draw do
+  resources :scores
+  root :to => "scores#new"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,11 @@
+<p>
+  <span>앞으로 졸업까지 남은 학기동안</span>
+  <span><%= @score.safe_average_score %></span>
+  <span>점을 받아야 하는 당신이 원하는 평점</span>
+  <span><%= @score.need_average_score %></span>
+  <span>점에 도달할 수 있습니다.</span>
+</p>
+
+
+<%= link_to '다시 계산해보기', edit_score_path(@score) %> |
+
