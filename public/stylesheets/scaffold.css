@@ -4,6 +4,7 @@ body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
   line-height: 18px;
+	max-width: 480px;
 }
 
 pre {
@@ -53,4 +54,15 @@ div.field, div.actions {
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
+}
+
+div.sns .tweeter {
+	margin:0;
+	width:100px;
+	float:left;
+}
+div.sns .facebook {
+	margin:0;
+	width:100px;
+	float:left;
 }
